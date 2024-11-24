@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
-import Municipe from 'App/Models/Municipe' // Importe o modelo Municipe
+import Municipe from 'App/core/municipes/infra/models/Municipe'
 
 export default class Province extends BaseModel {
   @column({ isPrimary: true })
@@ -10,11 +10,11 @@ export default class Province extends BaseModel {
   public name: string
 
   @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime;
+  public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime;
+  public updatedAt: DateTime
 
   @hasMany(() => Municipe)
-  public municipes: HasMany<typeof Municipe> 
+  public municipes: HasMany<typeof Municipe>
 }

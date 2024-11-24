@@ -1,7 +1,9 @@
 import Route from '@ioc:Adonis/Core/Route'
 import authRoutes from '../app/core/auth/routes/auth-routes'
+import municipeRoutes from 'App/core/municipes/routes/municipe-routes'
 
 authRoutes()
+municipeRoutes()
 
 Route.get('/', async () => {
   return { hello: 'VOLTA PARA CASA' }

@@ -1,7 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, belongsTo, BelongsTo } from '@ioc:Adonis/Lucid/Orm'
-import Province from './Province'
-
+import Province from 'App/Models/Province'
 export default class Municipe extends BaseModel {
   @column({ isPrimary: true })
   public id: number

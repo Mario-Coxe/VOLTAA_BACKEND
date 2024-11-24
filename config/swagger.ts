@@ -24,7 +24,7 @@ export default {
         },
       },
     },
-    apis: ['app/**/*.ts', 'docs/swagger/**/*.yml', 'start/routes.ts'],
+    apis: ['app/**/*.ts', 'app/core/**/docs/*.yml', 'start/routes.ts'],
     basePath: '/',
   },
   mode: process.env.NODE_ENV === 'production' ? 'PRODUCTION' : 'RUNTIME',
